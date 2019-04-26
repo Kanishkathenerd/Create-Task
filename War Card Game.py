@@ -27,8 +27,8 @@ for number in range(26):
     for playerHand1 in range(1):
         print(str(deck.pop()))
         
-deck1 = [x for x in deck if x not in playerHand1]
-##Change
+deck1 = filter(lambda i: i not in playerHand1, deck) 
+print(str(deck1))
 
 print("Here are the cards in Player 2's deck: ")
 for number in range(26):
